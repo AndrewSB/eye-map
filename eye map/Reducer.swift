@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import RxCocoa
 import CoreMotion
 
 typealias VisionResult = (String, Float)
@@ -10,7 +11,10 @@ class Reducer {
     
     private let motionSubject = PublishSubject<CMRotationRate>()
     private let visionSubject = PublishSubject<([VisionResult])>()
-    var result: Observable<Result>!
+    
+    var motionIsStill: Observable<(CMRotationRate?, Bool)>!
+    var result: Observable<Result>?
+    var motionSum: CMRotationRate?
     
     init(previewView: UIView? = nil) {
         self.vision = Vision(previewView: previewView)
@@ -18,18 +22,32 @@ class Reducer {
         self.motion.onNext = motionSubject.onNext
         self.vision.onNext = visionSubject.onNext
         
-        let _ = Observable<Int>.timer(0, period: 1, scheduler: MainScheduler.instance)
-        
-        self.result = motionSubject
-            .scan(nil) { oldValue, newMotionVector in
-                guard let oldValue = oldValue else { return newMotionVector }
+        self.motionIsStill = motionSubject
+            .map { motionValue -> CMRotationRate in
+                guard self.motionSum != nil else {
+                    self.motionSum = motionValue
+                    return self.motionSum!
+                }
+                self.motionSum = self.motionSum! + motionValue
                 
-                return oldValue ~= newMotionVector ? newMotionVector : nil
+                return self.motionSum!
             }
-            .filter { $0 != nil }
-            .map { $0! }
-            // at this point, we want to scan the image, and parcel it forward
-            .flatMap(embedVisionValue)
+            .scan((nil, false)) { old, new -> (CMRotationRate?, Bool) in
+                guard old.0 != nil else { return (new, false) }
+                
+                if old.0! ~= new {
+                    return (new, true)
+                } else {
+                    return (new, false)
+                }
+        }
+        
+        self.result = self.motionIsStill
+            .filter { $0.1 == true }
+            .distinctUntilChanged { $0.1 == $1.1 }
+            .map { $0.0! }
+            // at this point, we want to scan the image, and move it to the point in the pipeline
+            .flatMapLatest(embedVisionValue)
             // only fire once per new candidate
             .distinctUntilChanged { $0.objectCandidate == $1.objectCandidate }
     

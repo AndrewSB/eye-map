@@ -14,3 +14,17 @@ func ~= (lhs: CMRotationRate, rhs: CMRotationRate) -> Bool {
         .map { $0 < acceptableMargin }
         .reduce(true) { $0 && $1 } // all true
 }
+
+extension CMRotationRate: Comparable {
+    public static func ==(lhs: CMRotationRate, rhs: CMRotationRate) -> Bool {
+        return [
+            lhs.x == rhs.x,
+            lhs.y == rhs.y,
+            lhs.z == rhs.z
+        ].allTrue
+    }
+
+    public static func <(lhs: CMRotationRate, rhs: CMRotationRate) -> Bool {
+        return lhs ~= rhs
+    }
+}
