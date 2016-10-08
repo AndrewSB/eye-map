@@ -221,6 +221,7 @@
 		46A91E071DA8BC7F00A1A2BB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E061DA8BC7E00A1A2BB /* Reducer.swift */; };
 		46A91E0C1DA8BE1600A1A2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */; };
 		46A91E0D1DA8BE1600A1A2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */; };
+		46A91E0F1DA8C07500A1A2BB /* CMRotationRate + Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E0E1DA8C07500A1A2BB /* CMRotationRate + Comparable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -440,6 +441,7 @@
 		46A91E061DA8BC7E00A1A2BB /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		46A91E0E1DA8C07500A1A2BB /* CMRotationRate + Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMRotationRate + Comparable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +482,7 @@
 				46A91E061DA8BC7E00A1A2BB /* Reducer.swift */,
 				46A91C651DA8B23800A1A2BB /* Motion.swift */,
 				46A91C671DA8B23C00A1A2BB /* Vision.swift */,
+				46A91E0E1DA8C07500A1A2BB /* CMRotationRate + Comparable.swift */,
 				46A91DFE1DA8B38800A1A2BB /* Implementation */,
 				46A91C571DA8B23300A1A2BB /* Main.storyboard */,
 				46A91C5A1DA8B23300A1A2BB /* Assets.xcassets */,
@@ -1036,6 +1039,7 @@
 				46A91C561DA8B23300A1A2BB /* ViewController.swift in Sources */,
 				46A91C661DA8B23800A1A2BB /* Motion.swift in Sources */,
 				46A91C541DA8B23300A1A2BB /* AppDelegate.swift in Sources */,
+				46A91E0F1DA8C07500A1A2BB /* CMRotationRate + Comparable.swift in Sources */,
 				46A91E071DA8BC7F00A1A2BB /* Reducer.swift in Sources */,
 				46A91DFB1DA8B34C00A1A2BB /* SlimMPSCNN.swift in Sources */,
 				46A91C681DA8B23C00A1A2BB /* Vision.swift in Sources */,
