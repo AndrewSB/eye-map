@@ -17,7 +17,7 @@ class Vision {
     
     private var videoCapture: VideoCapture!
     
-    init(previewView: UIView) {
+    init(previewView: UIView?) {
         // Load default device.
         device = MTLCreateSystemDefaultDevice()
         
@@ -32,7 +32,7 @@ class Vision {
         let spec = VideoSpec(fps: 3, size: CGSize(width: 1280, height: 720))
         videoCapture = VideoCapture(cameraType: .back,
                                     preferredSpec: spec,
-                                    previewContainer: previewView.layer)
+                                    previewContainer: previewView?.layer)
         videoCapture.imageBufferHandler = {[unowned self] (imageBuffer, timestamp, outputBuffer) in
             let ciImage = CIImage(cvPixelBuffer: imageBuffer)
             guard let cgImage = self.ciContext.createCGImage(ciImage, from: ciImage.extent) else {return}

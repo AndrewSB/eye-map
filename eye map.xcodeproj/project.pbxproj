@@ -218,6 +218,9 @@
 		46A91E031DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91DFF1DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift */; };
 		46A91E041DA8B3DF00A1A2BB /* VideoCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E001DA8B3DF00A1A2BB /* VideoCameraType.swift */; };
 		46A91E051DA8B3DF00A1A2BB /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E011DA8B3DF00A1A2BB /* VideoCapture.swift */; };
+		46A91E071DA8BC7F00A1A2BB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E061DA8BC7E00A1A2BB /* Reducer.swift */; };
+		46A91E0C1DA8BE1600A1A2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */; };
+		46A91E0D1DA8BE1600A1A2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -434,6 +437,9 @@
 		46A91DFF1DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extension.swift"; sourceTree = "<group>"; };
 		46A91E001DA8B3DF00A1A2BB /* VideoCameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCameraType.swift; sourceTree = "<group>"; };
 		46A91E011DA8B3DF00A1A2BB /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		46A91E061DA8BC7E00A1A2BB /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +447,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A91E0C1DA8BE1600A1A2BB /* RxCocoa.framework in Frameworks */,
+				46A91E0D1DA8BE1600A1A2BB /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +460,7 @@
 			children = (
 				46A91C521DA8B23300A1A2BB /* eye map */,
 				46A91C511DA8B23300A1A2BB /* Products */,
+				46A91E091DA8BE1600A1A2BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -468,6 +477,7 @@
 			children = (
 				46A91C531DA8B23300A1A2BB /* AppDelegate.swift */,
 				46A91C551DA8B23300A1A2BB /* ViewController.swift */,
+				46A91E061DA8BC7E00A1A2BB /* Reducer.swift */,
 				46A91C651DA8B23800A1A2BB /* Motion.swift */,
 				46A91C671DA8B23C00A1A2BB /* Vision.swift */,
 				46A91DFE1DA8B38800A1A2BB /* Implementation */,
@@ -724,6 +734,15 @@
 			path = "../../iOS-10-Sampler/libs/VideoCapture";
 			sourceTree = "<group>";
 		};
+		46A91E091DA8BE1600A1A2BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */,
+				46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -734,6 +753,7 @@
 				46A91C4C1DA8B23300A1A2BB /* Sources */,
 				46A91C4D1DA8B23300A1A2BB /* Frameworks */,
 				46A91C4E1DA8B23300A1A2BB /* Resources */,
+				46A91E081DA8BDB300A1A2BB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -990,6 +1010,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46A91E081DA8BDB300A1A2BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46A91C4C1DA8B23300A1A2BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -998,6 +1036,7 @@
 				46A91C561DA8B23300A1A2BB /* ViewController.swift in Sources */,
 				46A91C661DA8B23800A1A2BB /* Motion.swift in Sources */,
 				46A91C541DA8B23300A1A2BB /* AppDelegate.swift in Sources */,
+				46A91E071DA8BC7F00A1A2BB /* Reducer.swift in Sources */,
 				46A91DFB1DA8B34C00A1A2BB /* SlimMPSCNN.swift in Sources */,
 				46A91C681DA8B23C00A1A2BB /* Vision.swift in Sources */,
 				46A91E041DA8B3DF00A1A2BB /* VideoCameraType.swift in Sources */,
@@ -1128,6 +1167,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A29347X2JZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "eye map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tfw.eye-map";
@@ -1141,6 +1184,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A29347X2JZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "eye map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tfw.eye-map";
