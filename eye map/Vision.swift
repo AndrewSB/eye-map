@@ -75,7 +75,6 @@ class Vision {
         
         // to deliver optimal performance we leave some resources used in MPSCNN to be released at next call of autoreleasepool,
         // so the user can decide the appropriate time to release this
-        print("ran")
         autoreleasepool{
             // encoding command buffer
             let commandBuffer = commandQueue.makeCommandBuffer()

@@ -1,25 +1,20 @@
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
-    let motion = Motion()
-    var vision: Vision!
-
+    let reducer = Reducer()
+    
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.vision = Vision(previewView: self.view)
-
-        motion.onNext = {
-            print("m: \($0)")
-        }
         
-        vision.onNext = {
-            print("v: \($0)")
-        }
-    
+        reducer.result.subscribe(onNext: { print("\($0)") })
+            .addDisposableTo(disposeBag)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        vision.startCapture()
+        reducer.start()
     }
 
 

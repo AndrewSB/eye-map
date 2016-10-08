@@ -25,7 +25,7 @@ class Motion {
     func bootstrapMotionManager() {
         guard manager.isGyroAvailable else { assertionFailure(); return }
         
-        manager.gyroUpdateInterval = 0.5
+        manager.gyroUpdateInterval = 1 / 5
         manager.startGyroUpdates(to: OperationQueue.main) { data, error in
             self.onNext?(data!.rotationRate)
         }
