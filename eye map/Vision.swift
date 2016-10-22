@@ -92,6 +92,7 @@ class Vision {
             results.forEach({ (label, prob) in
                 resultStr = resultStr + label + "\t" + String(format: "%.1f", prob * 100) + "%\n\n"
             })
+            print(resultStr)
             
             DispatchQueue.main.async {
                 self.onNext?(results)

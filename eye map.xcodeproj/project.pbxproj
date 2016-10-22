@@ -12,6 +12,9 @@
 		4678A6C41DA8CE070009AAA1 /* CMRotationRate + Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C31DA8CE070009AAA1 /* CMRotationRate + Diffable.swift */; };
 		4678A6C61DA8CFB20009AAA1 /* [Bool] + AllTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C51DA8CFB20009AAA1 /* [Bool] + AllTrue.swift */; };
 		4678A6C81DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C71DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift */; };
+		469150041DBB6CE100064A49 /* AVCaptureDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469150011DBB6CE100064A49 /* AVCaptureDevice+Extension.swift */; };
+		469150051DBB6CE100064A49 /* VideoCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469150021DBB6CE100064A49 /* VideoCameraType.swift */; };
+		469150061DBB6CE100064A49 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469150031DBB6CE100064A49 /* VideoCapture.swift */; };
 		46A91C541DA8B23300A1A2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91C531DA8B23300A1A2BB /* AppDelegate.swift */; };
 		46A91C561DA8B23300A1A2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91C551DA8B23300A1A2BB /* ViewController.swift */; };
 		46A91C591DA8B23300A1A2BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A91C571DA8B23300A1A2BB /* Main.storyboard */; };
@@ -220,9 +223,6 @@
 		46A91DFB1DA8B34C00A1A2BB /* SlimMPSCNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91DF81DA8B34C00A1A2BB /* SlimMPSCNN.swift */; };
 		46A91DFC1DA8B34C00A1A2BB /* Inception3Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91DF91DA8B34C00A1A2BB /* Inception3Net.swift */; };
 		46A91DFD1DA8B34C00A1A2BB /* Inception3Net+result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91DFA1DA8B34C00A1A2BB /* Inception3Net+result.swift */; };
-		46A91E031DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91DFF1DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift */; };
-		46A91E041DA8B3DF00A1A2BB /* VideoCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E001DA8B3DF00A1A2BB /* VideoCameraType.swift */; };
-		46A91E051DA8B3DF00A1A2BB /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E011DA8B3DF00A1A2BB /* VideoCapture.swift */; };
 		46A91E071DA8BC7F00A1A2BB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A91E061DA8BC7E00A1A2BB /* Reducer.swift */; };
 		46A91E0C1DA8BE1600A1A2BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */; };
 		46A91E0D1DA8BE1600A1A2BB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */; };
@@ -236,6 +236,9 @@
 		4678A6C31DA8CE070009AAA1 /* CMRotationRate + Diffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMRotationRate + Diffable.swift"; sourceTree = "<group>"; };
 		4678A6C51DA8CFB20009AAA1 /* [Bool] + AllTrue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "[Bool] + AllTrue.swift"; sourceTree = "<group>"; };
 		4678A6C71DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMRotationRate + Directionable.swift"; sourceTree = "<group>"; };
+		469150011DBB6CE100064A49 /* AVCaptureDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extension.swift"; sourceTree = "<group>"; };
+		469150021DBB6CE100064A49 /* VideoCameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCameraType.swift; sourceTree = "<group>"; };
+		469150031DBB6CE100064A49 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		46A91C501DA8B23300A1A2BB /* eye map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eye map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A91C531DA8B23300A1A2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46A91C551DA8B23300A1A2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -446,9 +449,6 @@
 		46A91DF81DA8B34C00A1A2BB /* SlimMPSCNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlimMPSCNN.swift; sourceTree = "<group>"; };
 		46A91DF91DA8B34C00A1A2BB /* Inception3Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inception3Net.swift; sourceTree = "<group>"; };
 		46A91DFA1DA8B34C00A1A2BB /* Inception3Net+result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Inception3Net+result.swift"; sourceTree = "<group>"; };
-		46A91DFF1DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extension.swift"; sourceTree = "<group>"; };
-		46A91E001DA8B3DF00A1A2BB /* VideoCameraType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCameraType.swift; sourceTree = "<group>"; };
-		46A91E011DA8B3DF00A1A2BB /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		46A91E061DA8BC7E00A1A2BB /* Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		46A91E0A1DA8BE1600A1A2BB /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		46A91E0B1DA8BE1600A1A2BB /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -469,6 +469,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		469150001DBB6CE100064A49 /* VideoCapture */ = {
+			isa = PBXGroup;
+			children = (
+				469150011DBB6CE100064A49 /* AVCaptureDevice+Extension.swift */,
+				469150021DBB6CE100064A49 /* VideoCameraType.swift */,
+				469150031DBB6CE100064A49 /* VideoCapture.swift */,
+			);
+			path = VideoCapture;
+			sourceTree = "<group>";
+		};
 		46A91C471DA8B23300A1A2BB = {
 			isa = PBXGroup;
 			children = (
@@ -736,23 +746,12 @@
 		46A91DFE1DA8B38800A1A2BB /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				46A91E021DA8B3DF00A1A2BB /* VideoCapture */,
+				469150001DBB6CE100064A49 /* VideoCapture */,
 				46A91DF81DA8B34C00A1A2BB /* SlimMPSCNN.swift */,
 				46A91DF91DA8B34C00A1A2BB /* Inception3Net.swift */,
 				46A91DFA1DA8B34C00A1A2BB /* Inception3Net+result.swift */,
 			);
 			name = Implementation;
-			sourceTree = "<group>";
-		};
-		46A91E021DA8B3DF00A1A2BB /* VideoCapture */ = {
-			isa = PBXGroup;
-			children = (
-				46A91DFF1DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift */,
-				46A91E001DA8B3DF00A1A2BB /* VideoCameraType.swift */,
-				46A91E011DA8B3DF00A1A2BB /* VideoCapture.swift */,
-			);
-			name = VideoCapture;
-			path = "../../iOS-10-Sampler/libs/VideoCapture";
 			sourceTree = "<group>";
 		};
 		46A91E091DA8BE1600A1A2BB /* Frameworks */ = {
@@ -1058,20 +1057,20 @@
 				46A91E111DA8C21A00A1A2BB /* Result.swift in Sources */,
 				4678A6C61DA8CFB20009AAA1 /* [Bool] + AllTrue.swift in Sources */,
 				46A91C661DA8B23800A1A2BB /* Motion.swift in Sources */,
+				469150061DBB6CE100064A49 /* VideoCapture.swift in Sources */,
 				46A91C541DA8B23300A1A2BB /* AppDelegate.swift in Sources */,
 				46A91E0F1DA8C07500A1A2BB /* CMRotationRate + Comparable.swift in Sources */,
 				46A91E071DA8BC7F00A1A2BB /* Reducer.swift in Sources */,
 				46A91DFB1DA8B34C00A1A2BB /* SlimMPSCNN.swift in Sources */,
 				46A91C681DA8B23C00A1A2BB /* Vision.swift in Sources */,
-				46A91E041DA8B3DF00A1A2BB /* VideoCameraType.swift in Sources */,
 				4678A6C01DA8C9B20009AAA1 /* Observable+ Ignore.swift in Sources */,
 				4678A6C21DA8CCDF0009AAA1 /* Landscape.swift in Sources */,
-				46A91E051DA8B3DF00A1A2BB /* VideoCapture.swift in Sources */,
-				46A91E031DA8B3DF00A1A2BB /* AVCaptureDevice+Extension.swift in Sources */,
 				46A91DFC1DA8B34C00A1A2BB /* Inception3Net.swift in Sources */,
 				4678A6C81DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift in Sources */,
+				469150041DBB6CE100064A49 /* AVCaptureDevice+Extension.swift in Sources */,
 				4678A6C41DA8CE070009AAA1 /* CMRotationRate + Diffable.swift in Sources */,
 				46A91DFD1DA8B34C00A1A2BB /* Inception3Net+result.swift in Sources */,
+				469150051DBB6CE100064A49 /* VideoCameraType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
