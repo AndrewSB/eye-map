@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4678A6C01DA8C9B20009AAA1 /* Observable+ Ignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6BF1DA8C9B20009AAA1 /* Observable+ Ignore.swift */; };
-		4678A6C21DA8CCDF0009AAA1 /* Landscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C11DA8CCDF0009AAA1 /* Landscape.swift */; };
 		4678A6C41DA8CE070009AAA1 /* CMRotationRate + Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C31DA8CE070009AAA1 /* CMRotationRate + Diffable.swift */; };
 		4678A6C61DA8CFB20009AAA1 /* [Bool] + AllTrue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C51DA8CFB20009AAA1 /* [Bool] + AllTrue.swift */; };
 		4678A6C81DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4678A6C71DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift */; };
@@ -232,7 +231,6 @@
 
 /* Begin PBXFileReference section */
 		4678A6BF1DA8C9B20009AAA1 /* Observable+ Ignore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+ Ignore.swift"; sourceTree = "<group>"; };
-		4678A6C11DA8CCDF0009AAA1 /* Landscape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landscape.swift; sourceTree = "<group>"; };
 		4678A6C31DA8CE070009AAA1 /* CMRotationRate + Diffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMRotationRate + Diffable.swift"; sourceTree = "<group>"; };
 		4678A6C51DA8CFB20009AAA1 /* [Bool] + AllTrue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "[Bool] + AllTrue.swift"; sourceTree = "<group>"; };
 		4678A6C71DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMRotationRate + Directionable.swift"; sourceTree = "<group>"; };
@@ -501,7 +499,6 @@
 			children = (
 				46A91C531DA8B23300A1A2BB /* AppDelegate.swift */,
 				46A91C551DA8B23300A1A2BB /* ViewController.swift */,
-				4678A6C11DA8CCDF0009AAA1 /* Landscape.swift */,
 				46A91E061DA8BC7E00A1A2BB /* Reducer.swift */,
 				46A91E101DA8C21A00A1A2BB /* Result.swift */,
 				46A91C651DA8B23800A1A2BB /* Motion.swift */,
@@ -1064,7 +1061,6 @@
 				46A91DFB1DA8B34C00A1A2BB /* SlimMPSCNN.swift in Sources */,
 				46A91C681DA8B23C00A1A2BB /* Vision.swift in Sources */,
 				4678A6C01DA8C9B20009AAA1 /* Observable+ Ignore.swift in Sources */,
-				4678A6C21DA8CCDF0009AAA1 /* Landscape.swift in Sources */,
 				46A91DFC1DA8B34C00A1A2BB /* Inception3Net.swift in Sources */,
 				4678A6C81DA8D06D0009AAA1 /* CMRotationRate + Directionable.swift in Sources */,
 				469150041DBB6CE100064A49 /* AVCaptureDevice+Extension.swift in Sources */,

@@ -4,7 +4,6 @@ import RxSwift
 
 class ViewController: UIViewController {
     var reducer: Reducer!
-    var landscape = Landscape<CMRotationRate, String>(margin: CMRotationRate(x: 0.1, y: 0.1, z: 0.1))
     
     @IBOutlet weak var label: UILabel!
     private let disposeBag = DisposeBag()
@@ -21,10 +20,8 @@ class ViewController: UIViewController {
         
         reducer.result!
             .subscribe(onNext: {
-                let description = self.landscape.append(new: ($0.motionVector, $0.objectCandidate))
-                
                 self.label.text = $0.objectCandidate
-                print(description)
+                print($0.objectCandidate)
             })
             .addDisposableTo(disposeBag)
     }
